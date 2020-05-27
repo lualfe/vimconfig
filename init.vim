@@ -37,6 +37,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'ryanoasis/vim-devicons'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'tpope/vim-eunuch'
 
 " Themes
 Plug 'gryf/wombat256grf'
@@ -53,6 +54,11 @@ Plug 'balanceiskey/vim-framer-syntax'
 Plug 'ntk148v/vim-horizon'
 Plug 'benburrill/potato-colors'
 Plug 'fatih/molokai'
+Plug 'Mizux/vim-colorschemes'
+Plug 'https://github.com/jsnal/vim-serape', { 'tag': 'v0.2.2' }
+Plug 'xdg/vim-darkluma'
+Plug 'jdsimcoe/panic.vim'
+Plug 'Rigellute/shades-of-purple.vim'
 " Initialize plugin system
 call plug#end()
 
@@ -74,7 +80,6 @@ let g:user_emmet_leader_key = ',e'
 "   \ }
 
 let g:lightline = {
-      \ 'colorscheme': 'molokai',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -358,10 +363,6 @@ let g:syntastic_check_on_wq = 0
 " let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 let g:syntastic_aggregate_errors = 1
 
-set background=dark
-set termguicolors
-colorscheme molokai
-
 let g:rehash256 = 1
 
 set colorcolumn=110
@@ -474,6 +475,8 @@ let g:indentLine_color_gui = '#17611b'
 let g:indentLine_char = '┊'
 
 command Kb bp|bd#
+command Bn bnext
+command Bp bprevious
 
 " set re=1
 
@@ -484,3 +487,7 @@ command Kb bp|bd#
 let g:UltiSnipsExpandTrigger="<c-s><c-n>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+set background=dark
+set termguicolors
+colorscheme panic
